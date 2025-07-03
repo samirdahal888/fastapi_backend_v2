@@ -68,19 +68,14 @@ http://localhost:8000/docs
 
 
 
-
-
-
-
-
-## 👨‍💻 For Development (without Docker)
+## 👨‍💻 For Development
 
 If you're a developer or contributor who wants to work on this project locally, follow the steps below to set up your development environment.
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/username/repo.git
 cd your-repo
 
 ```

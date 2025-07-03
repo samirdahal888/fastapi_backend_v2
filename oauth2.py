@@ -9,6 +9,7 @@ from sqlmodel import select
 from config import ALGORITHM, SECRET_KEY
 from database import SessionDep
 from module import Admin
+from schema import TokenData
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="Admin/login")
 
@@ -26,6 +27,7 @@ async def get_current_user(
         username = payload.get("sub")
         if username is None:
             raise credentials_exception
+        TokenData(username=username)
     except InvalidTokenError:
         raise credentials_exception
     statement = select(Admin).where(Admin.username == username)
