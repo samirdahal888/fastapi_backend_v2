@@ -2,11 +2,11 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-copy requirement.txt requirement.txt
+COPY requirement.txt requirement.txt
 
 RUN pip install -r requirement.txt
 
-copy . .
+COPY . .
 
 
 EXPOSE 8000

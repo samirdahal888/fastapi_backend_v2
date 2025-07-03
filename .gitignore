@@ -1,0 +1,14 @@
+# Ignore all __pycache__ directories (compiled Python cache)
+**/__pycache__/
+
+# Ignore your virtual environment folder
+myenv/
+
+# Ignore environment variable file (contains sensitive info like secret keys)
+.env
+
+# Ignore Docker ignore file (used only by Docker, not needed in Git)
+.dockerignore
+
+# igore .git 
+.git 
