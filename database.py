@@ -1,15 +1,16 @@
-from sqlmodel import Session, SQLModel, create_engine
-from fastapi import Depends
+import os
 from typing import Annotated
-import os 
+
 from dotenv import load_dotenv
+from fastapi import Depends
+from sqlmodel import Session, SQLModel, create_engine
+
 load_dotenv()
 
 
-DATA_DIR = 'database'
-os.makedirs(DATA_DIR, exist_ok=True)      # no return value you care about
-sqlite_file_name = os.path.join(DATA_DIR, 'database.db')
-
+DATA_DIR = "database"
+os.makedirs(DATA_DIR, exist_ok=True)  # no return value you care about
+sqlite_file_name = os.path.join(DATA_DIR, "database.db")
 
 
 sqlite_url = f"sqlite:///{sqlite_file_name}"
@@ -22,9 +23,9 @@ engine = create_engine(sqlite_url, connect_args=connect_args)
 
 # engine = create_engine(DATABASE_URL,echo=True)
 
+
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
-
 
 
 def get_session():

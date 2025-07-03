@@ -5,7 +5,13 @@ from router import admin, student
 
 app = FastAPI(
     title="Student management system",
-    description="simple version to keep students data in database",
+    description="A secure and lightweight API to manage student records with authentication and full CRUD support.",
+    version="1.0.0",
+    contact={
+        "name": "Samir Dahal",
+        "email": "samirdahal217@gmail.com",
+        "url": "https://github.com/samirdahal888",
+    },
 )
 
 

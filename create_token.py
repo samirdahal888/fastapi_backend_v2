@@ -1,6 +1,9 @@
+from datetime import datetime, timedelta, timezone
+
 import jwt
-from config import SECRET_KEY,ALGORITHM
-from datetime import datetime,timedelta,timezone
+
+from config import ALGORITHM, SECRET_KEY
+
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None):
     to_encode = data.copy()
