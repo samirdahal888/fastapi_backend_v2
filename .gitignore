@@ -12,3 +12,8 @@ myenv/
 
 # igore .git 
 .git 
+
+# local test database file
+database/
+
+
