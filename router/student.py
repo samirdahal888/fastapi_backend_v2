@@ -7,7 +7,6 @@ from database import SessionDep
 from module import Admin, StudenCreate, Student, StudentUpdate
 from oauth2 import get_current_user
 
-# route
 router = APIRouter(tags=["STUDENTS"])
 
 
